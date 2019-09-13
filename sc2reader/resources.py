@@ -386,9 +386,9 @@ class Replay(Resource):
             return
 
         self.map_name = details["map_name"]
-        self.region = details["cache_handles"][0].server.lower()
-        self.map_hash = details["cache_handles"][-1].hash
-        self.map_file = details["cache_handles"][-1]
+        #self.region = details["cache_handles"][0].server.lower()
+        #self.map_hash = details["cache_handles"][-1].hash
+        #self.map_file = details["cache_handles"][-1]
 
         # Expand this special case mapping
         if self.region == "sg":
@@ -431,7 +431,7 @@ class Replay(Resource):
         self.game_length = self.length
         self.real_length = utils.Length(
             seconds=int(
-                self.length.seconds / GAME_SPEED_FACTOR[self.expansion][self.speed]
+                self.length.seconds / 1
             )
         )
         self.start_time = datetime.utcfromtimestamp(
@@ -1082,7 +1082,7 @@ class GameSummary(Resource):
         self.game_length = utils.Length(seconds=self.parts[0][7])
         self.real_length = utils.Length(
             seconds=int(
-                self.parts[0][7] / GAME_SPEED_FACTOR[self.expansion][self.game_speed]
+                self.parts[0][7] / 1
             )
         )
         self.start_time = datetime.utcfromtimestamp(
