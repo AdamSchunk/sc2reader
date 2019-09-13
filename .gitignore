@@ -1,5 +1,6 @@
 *~
 *.pyc
+*.SC2Replay
 dist
 build
 sc2reader.egg-info
