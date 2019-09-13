@@ -1,5 +1,5 @@
 import sc2reader as reader
 import os
 
-replay_dir = 'replayDir'
-replays = reader.load_replay('replayDir/test.SC2Replay')
+replay_dir = 'test_replays/engagemetnts'
+replays = reader.load_replays(os.path.join(replay_dir))
