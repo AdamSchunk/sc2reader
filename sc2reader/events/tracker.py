@@ -292,7 +292,6 @@ class UnitBornEvent(TrackerEvent):
 
 	def __init__(self, frames, data, build):
 		super(UnitBornEvent, self).__init__(frames)
-		print(data)
 		#: The index portion of the unit id
 		self.unit_id_index = data[0]
 
@@ -349,7 +348,6 @@ class UnitDiedEvent(TrackerEvent):
 	"""
 
 	def __init__(self, frames, data, build):
-		print(data)
 		super(UnitDiedEvent, self).__init__(frames)
 
 		#: The index portion of the unit id
